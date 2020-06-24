@@ -1,0 +1,13 @@
+<div>
+  <div id="result" class="result">{{ ResultMessage }}</div>
+      <div class="grid"
+          *ngFor="let rowIndex of [0,1,2]">
+              <app-block 
+                          *ngFor="let colIndex of [0,1,2]"
+                          [rowIndex]="rowIndex"
+                          [colIndex]="colIndex"
+                          [blockItem]="grid[rowIndex][colIndex]"
+                          (click)="updateGrid(rowIndex, colIndex)">
+              </app-block>
+      </div>
+</div>
